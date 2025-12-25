@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация</h1>
+
+        <form id="registerForm">
+            <div>
+                <label>Логин (латиница и цифры, не менее 6 символов):</label>
+                <input type="text" id="login" required>
+                <span class="error" id="loginError"></span>
+            </div>
+
+            <div>
+                <label>Пароль (минимум 8 символов):</label>
+                <input type="password" id="password" required>
+                <span class="error" id="passwordError"></span>
+            </div>
+
+            <div>
+                <label>ФИО (кириллица и пробелы):</label>
+                <input type="text" id="fio" required>
+                <span class="error" id="fioError"></span>
+            </div>
+
+            <div>
+                <label>Телефон (формат: 8(XXX)XXX-XX-XX):</label>
+                <input type="text" id="phone" placeholder="8(999)123-45-67" required>
+                <span class="error" id="phoneError"></span>
+            </div>
+
+            <div>
+                <label>Email:</label>
+                <input type="email" id="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <button type="submit">Создать пользователя</button>
+            <div class="error" id="formError"></div>
+        </form>
+
+        <p>Уже зарегистрированы? <a href="login.html">Войти</a></p>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
