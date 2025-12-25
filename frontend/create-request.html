@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать заявку</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Создать заявку на обучение</h1>
+
+        <div class="links">
+            <a href="requests.html">Мои заявки</a>
+            <a href="#" onclick="logout()">Выйти</a>
+        </div>
+
+        <form id="requestForm">
+            <div>
+                <label>Наименование курса:</label>
+                <select id="courseName" required>
+                    <option value="">Выберите курс</option>
+                    <option value="Основы алгоритмизации и программирования">Основы алгоритмизации и программирования</option>
+                    <option value="Основы веб-дизайна">Основы веб-дизайна</option>
+                    <option value="Основы проектирования баз данных">Основы проектирования баз данных</option>
+                </select>
+                <span class="error" id="courseError"></span>
+            </div>
+
+            <div>
+                <label>Желаемая дата начала обучения (ДД.ММ.ГГГГ):</label>
+                <input type="text" id="startDate" placeholder="01.01.2024" required>
+                <span class="error" id="dateError"></span>
+            </div>
+
+            <div>
+                <label>Способ оплаты:</label>
+                <div>
+                    <label><input type="radio" name="paymentMethod" value="наличными" required> Наличными</label>
+                    <label><input type="radio" name="paymentMethod" value="переводом по номеру телефона" required> Переводом по номеру телефона</label>
+                </div>
+                <span class="error" id="paymentError"></span>
+            </div>
+
+            <button type="submit">Отправить</button>
+            <div class="error" id="formError"></div>
+        </form>
+    </div>
+
+    <script src="create-request.js"></script>
+</body>
+</html>
