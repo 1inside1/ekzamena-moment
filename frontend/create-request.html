@@ -16,6 +16,23 @@
         </div>
 
         <form id="requestForm">
+            <div class="slider" style="margin-bottom: 20px;">
+                <div class="slide active">
+                    <img src="images/основы алогоритмизации.jpg" alt="Основы алгоритмизации и программирования">
+                </div>
+                <div class="slide">
+                    <img src="images/основы web дизайн.jpg" alt="Основы веб-дизайна">
+                </div>
+                <div class="slide">
+                    <img src="images/основы проектированя бд.jpg" alt="Основы проектирования баз данных">
+                </div>
+                <div class="slide">
+                    <img src="images/основы алогоритмизации.jpg" alt="Курсы дополнительного профессионального образования">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+            </div>
+
             <div>
                 <label>Наименование курса:</label>
                 <select id="courseName" required>
@@ -47,6 +64,7 @@
         </form>
     </div>
 
+    <script src="slider.js"></script>
     <script src="create-request.js"></script>
 </body>
 </html>
